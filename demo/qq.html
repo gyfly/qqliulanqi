@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*首页静态样式*/
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #FCFCFC;
+        }
+        
+        .top {
+            width: 1024px;
+            height: 110px;
+            margin-top: 60px;
+            animation: 2s box12 ease-in-out;
+        }
+        
+        @keyframes box12 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #FBFBFB;
+        }
+        
+        .box {
+            width: 1024px;
+            height: 768px;
+            position: absolute;
+            top: 3%;
+            left: 15%;
+            perspective: 500px;
+        }
+        
+        .top .browser {
+            width: 313px;
+            height: 46px;
+            background: url(../img/17.png);
+            float: left;
+        }
+        
+        .download {
+            width: 216px;
+            height: 70px;
+            background: url(../img/1.png);
+            float: right;
+        }
+        
+        .update {
+            float: right;
+            font-family: 微软雅黑, Helvetica;
+            color: rgb(136, 136, 136);
+            width: 216px;
+            text-align: center;
+            margin-top: 82px;
+            margin-right: -216px;
+        }
+        
+        .slogan {
+            width: 880px;
+            height: 320px;
+            background: url(../img/14.png);
+            margin: 60px auto;
+            transform-style: preserve-3d;
+            animation: 2s box11 ease-in-out;
+            transform: rotatex(0deg);
+        }
+        
+        .label {
+            width: 880px;
+            height: 320px;
+            background: url(../img/skin.gif);
+            position: absolute;
+            top: 220px;
+            left: 80px;
+            transform-style: preserve-3d;
+            animation: 2s box11 ease-in-out;
+            transform: rotatex(0deg);
+        }
+        
+        @keyframes box11 {
+            0% {
+                transform: rotateX(-20deg) translateZ(500px);
+            }
+            100% {
+                transform: rotatex(0deg);
+            }
+        }
+        /*首页动态效果*/
+        
+        .move {
+            width: 2600px;
+            height: 650px;
+        }
+        
+        .ball {
+            width: 1300px;
+            height: 650px;
+            position: relative;
+            float: left;
+            animation: s 30s linear infinite;
+        }
+        
+        @keyframes s {
+            0% {
+                right: 0;
+            }
+            100% {
+                right: 1300px;
+            }
+        }
+        
+        .qiu1 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            animation: qiu 6s linear infinite;
+            right: 100px;
+        }
+        
+        .qiu2 {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            top: 100px;
+            animation: qiu 6s linear infinite;
+            right: 150px
+        }
+        
+        .qiu3 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            right: 400px;
+            animation: qiu 6s linear infinite;
+            top: 300px;
+        }
+        
+        .qiu4 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            right: 700px;
+            animation: qiu 6s linear infinite;
+            top: 280px;
+        }
+        
+        .qiu5 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            right: 800px;
+            animation: qiu 6s linear infinite;
+            top: 90px;
+        }
+        
+        .qiu6 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            right: 180px;
+            animation: qiu 6s linear infinite;
+            top: 250px;
+        }
+        
+        .qiu7 {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(to bottom, #ffffff, #dedede);
+            border-radius: 50%;
+            position: absolute;
+            right: 800px;
+            top: 50px;
+            transform-style: preserve-3d;
+            animation: qiu 6s linear infinite;
+        }
+        
+        @keyframes qiu {
+            0% {
+                transform: rotate(0deg)
+            }
+            ;
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        .speed {
+            width: 318px;
+            height: 318px;
+            transform-style: preserve-3d;
+            position: absolute;
+            left: 350px;
+            animation: 2s im1 ease-in-out 0.5s;
+            transform: rotatez(90deg) rotateY(90deg) translateZ(-6000px);
+        }
+        
+        @keyframes im1 {
+            100% {
+                transform: rotatey(0deg) rotatex(360deg) translateZ(500px);
+            }
+        }
+        
+        .photo {
+            position: absolute;
+        }
+        
+        .chro {
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            position: relative;
+            top: 50px;
+            transform-style: preserve-3d;
+            animation: 2s ps ease-in-out;
+        }
+        
+        @keyframes ps {
+            0% {
+                transform: translatez(500px) rotateX(35deg);
+            }
+            40% {
+                transform: translatez(-500px) rotateY(45deg);
+            }
+            100% {
+                transform: translatez(0px);
+            }
+        }
+        
+        #sim {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            perspective: 600px;
+        }
+        
+        #sim-1 {
+            position: absolute;
+            width: 800px;
+            height: 600px;
+            border: 1px solid darkgrey;
+            left: 450px;
+            top: 200px;
+            background-color: white;
+            transform-style: preserve-3d;
+            animation: 2s shan ease-in-out;
+            transform: translateZ(-50px) rotateX(30deg);
+            opacity: 1;
+        }
+        
+        .tab {
+            transform: translateZ(100px);
+            margin-left: 488px;
+            margin-top: 240px;
+            animation: 2s shan ease-in-out;
+        }
+        
+        #sim-1 p {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to right, #ffffff, #dedede);
+            position: absolute;
+            top: 100px;
+        }
+        
+        #light {
+            position: absolute;
+            top: 340px;
+            left: 0px;
+            animation: appear 2s ease-in-out;
+        }
+        
+        @keyframes appear {
+            0% {
+                top: 0;
+                left: 300px;
+                transform: translateZ(1000px);
+            }
+            100% {
+                transform: translateZ(0px);
+            }
+        }
+        
+        @keyframes shan {
+            0% {
+                left: 1300px;
+                transform: rotateY(45deg);
+                opacity: 0;
+            }
+        }
+        
+        #wechat {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            top: 100px;
+            perspective: 500px;
+        }
+        
+        #pic1 {
+            position: absolute;
+            left: 202px;
+            top: 373px;
+            animation: 1.8s kkk ease-in-out;
+        }
+        
+        #pic2 {
+            position: absolute;
+            left: 217px;
+            animation: 1.5s kk ease-in-out;
+        }
+        
+        #pic3 {
+            position: absolute;
+            left: 246px;
+            top: 255px;
+            animation: 2.3s kk ease-in-out;
+        }
+        
+        #pic4 {
+            position: absolute;
+            left: 256px;
+            top: 12px;
+            animation: 2.4s kk ease-in-out;
+        }
+        
+        #pic5 {
+            position: absolute;
+            left: 537px;
+            top: 42px;
+            animation: 1.6s kk ease-in-out;
+        }
+        
+        @-webkit-keyframes kk {
+            0% {
+                transform: rotateX(-60deg)translatez(-600px)
+            }
+        }
+        
+        @-webkit-keyframes kkk {
+            0% {
+                left: -300px;
+                transform: rotatey(60deg) translatez(-500px);
+            }
+            100% {
+                transform: rotatey(0deg) translatez(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+
+
+        <div class="move">
+            <div class="ball">
+                <div class="qiu1"></div>
+                <div class="qiu2"></div>
+                <div class="qiu3"></div>
+                <div class="qiu4"></div>
+                <div class="qiu5"></div>
+                <div class="qiu6"></div>
+                <div class="qiu7"></div>
+            </div>
+            <div class="ball">
+                <div class="qiu1"></div>
+                <div class="qiu2"></div>
+                <div class="qiu3"></div>
+                <div class="qiu4"></div>
+                <div class="qiu5"></div>
+                <div class="qiu6"></div>
+                <div class="qiu7"></div>
+            </div>
+        </div>
+        <div id="kuang">
+
+
+            <div class="box">
+                <div class="top">
+                    <div class="browser">
+
+                    </div>
+
+
+
+                    <div class="download">
+
+                    </div>
+                    <span class="update">6月1日更新9.6.1正式版</span>
+
+
+                </div>
+                <div class="slogan">
+
+                </div>
+                <div class="label">
+
+                </div>
+
+
+
+
+            </div>
+            <div class="box" style="display:none;">
+                <div class="speed">
+                    <img class="photo" src="../img/2.png" alt="">
+                    <img class="photo" src="../img/3.png" alt="">
+                    <img class="photo" src="../img/4.png" alt="">
+                    <img class="photo" src="../img/5.png" alt="">
+
+                </div>
+                <div class="chro">
+                    <img src="../img/15.png" alt="" style="position:absolute;left:35%;top:20%;">
+                    <img src="../img/16.png" alt="" style="position:absolute;left:35%;top:90%;">
+                </div>
+            </div>
+            <div class="box" style="display:none;">
+                <div id="sim">
+                    <div id="sim-1">
+
+                        <img src="../img/11.png" alt="" style="margin-top:100px">
+                        <p></p>
+                    </div>
+                    <img class="tab" src="../img/12.png" alt="">
+                    <img id="light" src="../img/18.png" alt="">
+                </div>
+            </div>
+            <div class="box" style="display:none;">
+                <div id="wechat">
+                    <img id="pic1" src="../img/10.png" alt="">
+                    <img id="pic2" src="../img/6.png" alt="">
+                    <img id="pic3" src="../img/7.png" alt="">
+                    <img id="pic4" src="../img/8.png" alt="">
+                    <img id="pic5" src="../img/9.png" alt="">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="jquery.js"></script>
+<script src="jq.mousewheel.js"></script>
+<script>
+    // 滚轮
+    var degree = 0;
+    var lock = true;
+
+    $('#body').mousewheel(function(ev, datale) {
+        if (!lock) return;
+        degree -= datale
+        console.log(datale); //鼠标往上滑动为1；往下为-1
+
+        if (degree == 4) {
+
+
+            degree = 0;
+        } else if (degree == -1) {
+            degree = 3
+        }
+        console.log(degree)
+        $(".box").eq(degree).show().siblings().hide()
+
+        lock = false;
+        setTimeout(function() {
+            lock = true;
+        }, 1000)
+
+    })
+</script>
+
+
+</html>
